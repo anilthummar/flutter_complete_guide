@@ -42,45 +42,9 @@ class CustomSlider extends StatelessWidget {
 
     return Column(
       children: [
-        Row(
-          children: List.generate(
-            divisions,
-            (index) => Expanded(
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.bottomCenter,
-                    height: valueHeight,
-                    child: index % (minorTick + 1) == 0
-                        ? Text(
-                            linearStep
-                                ? '${(index / (divisions - 1) * maxValue).toStringAsFixed(tickValuePrecision)}'
-                                : '${(steps?[index])?.toStringAsFixed(tickValuePrecision)}',
-                            style: TextStyle(
-                              fontSize: 12,
-                            ),
-                            textAlign: TextAlign.center,
-                          )
-                        : null,
-                  ),
-                  Container(
-                    alignment: Alignment.bottomCenter,
-                    height: tickHeight,
-                    child: VerticalDivider(
-                      indent: index % (minorTick + 1) == 0 ? 2 : 6,
-                      thickness: 1.2,
-                      color: (index / (divisions - 1)) * maxValue == value
-                          ? activeColor ?? Colors.orange
-                          : Colors.grey.shade300,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: labelOffset),
+          // padding: EdgeInsets.symmetric(horizontal: labelOffset),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: SliderTheme(
             data: SliderThemeData(
               trackHeight:
@@ -107,6 +71,46 @@ class CustomSlider extends StatelessWidget {
               divisions: divisions - 1,
               onChanged: onChanged,
               label: value.toStringAsFixed(labelValuePrecision),
+            ),
+          ),
+        ),
+        Row(
+          children: List.generate(
+            divisions,
+                (index) => Expanded(
+              child: Column(
+                children: [
+                  // Container(
+                  //   alignment: Alignment.bottomCenter,
+                  //   // height: valueHeight,
+                  //   child: index % (minorTick + 1) == 0
+                  //       ? Text(""
+                      // linearStep
+                      //     ? '${(index / (divisions - 1) * maxValue).toStringAsFixed(tickValuePrecision)}'
+                      //     : '${(steps?[index])?.toStringAsFixed(tickValuePrecision)}',
+                      // style: TextStyle(
+                      //   fontSize: 12,
+                      // ),
+                      // textAlign: TextAlign.center,
+                  //   )
+                  //       : null,
+                  // ),
+                  Container(
+                    alignment: Alignment.bottomCenter,
+                    height: 3,
+                    child: VerticalDivider(
+                      //indent: index % (minorTick + 1) == 0 ? 2 : 6,
+                      thickness: 2.5,
+                      color: Colors.grey.shade300,
+
+
+                      // color: (index / (divisions - 1)) * maxValue == value
+                      //     ? activeColor ?? Colors.orange
+                      //     : Colors.grey.shade300,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
