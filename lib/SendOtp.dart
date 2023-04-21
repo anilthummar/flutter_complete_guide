@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/setupprofile/SetUpMain.dart';
 import 'package:flutter_complete_guide/setupprofile/SetUpProfile.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
 import 'package:flutter_complete_guide/utils/MyCustomButtonWidget.dart';
@@ -222,7 +223,7 @@ class _SendOtpScreen extends State<SendOtpScreen> {
                                       Navigator.push(context,
                                           MaterialPageRoute(
                                               builder :(context){
-                                                return SetUpProfile();
+                                                return SetUpMain();
                                               }));
                                       _changeWidth();
                                     },

@@ -8,6 +8,7 @@ import '../intro_Screen/Intro_One.dart';
 import '../intro_Screen/Intro_Three.dart';
 import '../intro_Screen/Intro_Two.dart';
 import '../utils/NumberStepper.dart';
+import 'SetUpProfileThree.dart';
 import 'SetUpProfileTwo.dart';
 
 class SetUpMain extends StatefulWidget {
@@ -69,7 +70,7 @@ class _OnBoardingScreenState extends State<SetUpMain>{
             children: const [
               SetUpProfile(),
               SetUpProfileTwo(),
-              IntroThree(),
+              SetUpProfileThree(),
             ],
           ),
           Row(

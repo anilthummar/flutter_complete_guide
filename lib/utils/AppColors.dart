@@ -13,6 +13,7 @@ class AppColors{
   static const startColor = Color(0xff719633); // Second `const` is optional in assignments.
   static const endColor = Color(0xff00923A); // Second `const` is optional in assignments.
   static const colorYellow = Color(0xffFFC531); // Second `const` is optional in assignments.
+  static const colorLightGray = Color(0xffEEEEEE80); // Second `const` is optional in assignments.
 
   static const kAnimationDuration = Duration(milliseconds: 200);
 

@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_complete_guide/setupprofile/SetUpMain.dart';
+import 'package:flutter_complete_guide/setupprofile/SetUpProfile.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
 import 'package:flutter_complete_guide/HomeScreen.dart';
 import 'package:flutter_complete_guide/utils/Header.dart';
@@ -162,7 +164,7 @@ class LoginScreen extends StatelessWidget{
                                               decoration: TextDecoration.underline,
                                               fontSize: 15),
                                           recognizer: TapGestureRecognizer()..onTap=(){
-                                            _navigateToHomeScreen(context,SignupScreen());
+                                            _navigateToHomeScreen(context,SetUpMain());
                                           },
                                         ),
                               ],),),]
