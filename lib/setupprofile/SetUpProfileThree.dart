@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'SearchHomeClub.dart';
+import 'SetUpMain.dart';
+
 class SetUpProfileThree extends StatefulWidget {
   const SetUpProfileThree({Key? key}) : super(key: key);
 
@@ -232,6 +235,13 @@ class _TextFieldDesignPageState extends State<SetUpProfileThree> {
                               fontSize: 15),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
+
+                            Navigator.push(context,
+                                MaterialPageRoute(
+                              builder:(context) {
+                                return SearchHomeClub();
+                              }
+                            ),);
                               // move to location map search screen
                             },
                         ),

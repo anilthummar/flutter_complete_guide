@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_complete_guide/intro_Screen/Intro_One.dart';
+import 'package:flutter_complete_guide/setupprofile/SearchHomeClub.dart';
 import 'package:flutter_complete_guide/setupprofile/SetUpProfileThree.dart';
 import 'package:flutter_complete_guide/setupprofile/SetUpProfileTwo.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
@@ -52,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage>{
     super.initState();
     Timer(
         const Duration(seconds:3 ),
-        ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const SetUpProfileThree())));
+        ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  SearchHomeClub())));
   }
 
 
