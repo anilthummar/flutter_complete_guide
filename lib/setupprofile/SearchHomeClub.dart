@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../HomeScreen.dart';
 import '../utils/AppColors.dart';
 import '../utils/MyCustomButtonWidget.dart';
 
@@ -199,7 +200,7 @@ class _SearchHomeClub extends State<SearchHomeClub> {
                           color: AppColors.colorGray,fontWeight: FontWeight.normal,
                           fontSize: 15,fontFamily: 'Poppins-Regular'),),
 
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       //Button Ok
                       Container(
                         width: 222,
@@ -209,6 +210,7 @@ class _SearchHomeClub extends State<SearchHomeClub> {
                           'Ok',
                           onTap: () {
                             Navigator.of(context).pop();
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),),);
                           },
                         ),
                       ),

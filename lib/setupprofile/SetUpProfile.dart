@@ -302,7 +302,7 @@ class _TextFieldDesignPageState extends State<SetUpProfile> {
                                                           'assets/images/ic_camera_plus.svg',
                                                         ),
                                                         // child: Image.network('https://picsum.photos/130/160'),
-                                                      )),
+                                                      ),),
                                                 ),
                                               ),
 

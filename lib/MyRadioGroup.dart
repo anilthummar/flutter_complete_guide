@@ -37,6 +37,7 @@ class RadioGroupWidget extends State<MyRadioGroup> {
 
                   value: GenederSelectionEnum.Male,
                   groupValue: _site,
+
                   onChanged: (value) => {
                     setState(() {
                       _site = value!;

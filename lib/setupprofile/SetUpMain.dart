@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/HomeScreen.dart';
 import 'package:flutter_complete_guide/setupprofile/SetUpProfile.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -12,14 +13,13 @@ import 'SetUpProfileThree.dart';
 import 'SetUpProfileTwo.dart';
 
 class SetUpMain extends StatefulWidget {
-  const SetUpMain ({Key? key}) : super(key: key);
+  const SetUpMain({Key? key}) : super(key: key);
 
   @override
-  _OnBoardingScreenState createState()=> _OnBoardingScreenState();
-
+  _OnBoardingScreenState createState() => _OnBoardingScreenState();
 }
 
-class _OnBoardingScreenState extends State<SetUpMain>{
+class _OnBoardingScreenState extends State<SetUpMain> {
   int currentStep = 1;
   int stepLength = 3;
   late bool complete;
@@ -32,7 +32,6 @@ class _OnBoardingScreenState extends State<SetUpMain>{
 
   back() {
     if (currentStep > 1) {
-
       goTo(currentStep - 1);
     }
   }
@@ -41,21 +40,16 @@ class _OnBoardingScreenState extends State<SetUpMain>{
     setState(() => currentStep = step);
     if (currentStep > stepLength) {
       setState(() => complete = true);
-
     }
   }
 
-
   final PageController _controller = PageController();
-  bool onLastPage= false;
-  bool widgetVisible = true ;
-
+  bool onLastPage = false;
+  bool widgetVisible = true;
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
       body: Stack(
         // page view
         children: [
@@ -64,7 +58,7 @@ class _OnBoardingScreenState extends State<SetUpMain>{
             onPageChanged: (index) {
               setState(() {
                 print("onLastPage_:$onLastPage : $index");
-                onLastPage=(currentStep==3);
+                onLastPage = (currentStep == 3);
               });
             },
             children: const [
@@ -79,34 +73,32 @@ class _OnBoardingScreenState extends State<SetUpMain>{
               Visibility(
                 visible: widgetVisible,
                 child: Container(
-                  alignment: const Alignment(0,0.95),
+                  alignment: const Alignment(0, 0.95),
                   child: GestureDetector(
-                    onTap:(){
+                    onTap: () {
                       _controller.jumpToPage(2);
                     },
-                    child:const SizedBox(
+                    child: const SizedBox(
                       height: 40,
                       width: 80,
                       child: Padding(
                         padding: EdgeInsets.all(1.5),
                         child: Center(
-                         // child: Text('Skip',style: TextStyle(color: AppColors.btnColor)),
+                            // child: Text('Skip',style: TextStyle(color: AppColors.btnColor)),
 
-                        ),
+                            ),
                       ),
                     ),
                   ),
-                ),),
+                ),
+              ),
               // Skip Button
-
-
-
             ],
           ),
           Positioned(
             bottom: 0,
             width: MediaQuery.of(context).size.width,
-            child:SizedBox(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 80,
               child: Card(
@@ -133,16 +125,15 @@ class _OnBoardingScreenState extends State<SetUpMain>{
                         onTap: currentStep == 1
                             ? null
                             : () {
-                          back();
-                          if(currentStep==1){
-                            _controller.jumpToPage(0);
-                          }else if (currentStep==2){
-                            _controller.jumpToPage(1);
-                          }else if(currentStep==3){
-                            _controller.jumpToPage(2);
-                          }
-
-                        },
+                                back();
+                                if (currentStep == 1) {
+                                  _controller.jumpToPage(0);
+                                } else if (currentStep == 2) {
+                                  _controller.jumpToPage(1);
+                                } else if (currentStep == 3) {
+                                  _controller.jumpToPage(2);
+                                }
+                              },
                         child: Container(
                           decoration: BoxDecoration(
                             color: AppColors.appColor,
@@ -158,8 +149,9 @@ class _OnBoardingScreenState extends State<SetUpMain>{
                                 borderRadius: BorderRadius.circular(30),
                               ),
                               child: Center(
-                                child: Text('Back',
-                                  style:  TextStyle(color: AppColors.appColor),
+                                child: Text(
+                                  'Back',
+                                  style: TextStyle(color: AppColors.appColor),
                                 ),
                               ),
                             ),
@@ -171,67 +163,72 @@ class _OnBoardingScreenState extends State<SetUpMain>{
                     Expanded(
                       flex: 1,
                       child: GestureDetector(
-                          onTap: () {
-                            next();
-                            print("currentStep_: $currentStep");
-                            if(currentStep==1){
-                              _controller.jumpToPage(0);
-                            }else if (currentStep==2){
-                              _controller.jumpToPage(1);
-                            }else if(currentStep==3){
-                              _controller.jumpToPage(2);
-                            }
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: AppColors.appColor,
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            height: 40,
-                            width: 80,
-                            child: Padding(
-                              padding: const EdgeInsets.all(1.5),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: AppColors.colorWhite,
-                                  borderRadius: BorderRadius.circular(35),
-                                ),
-                                child: Center(
-                                  child: onLastPage?GestureDetector(
-                                    onTap:(){
-                                      // Navigator.push(context,
-                                      //     MaterialPageRoute(
-                                      //         builder :(context){
-                                      //           return LoginScreen();
-                                      //         }));
-                                    },
-                                    child: Text('Finish',
-                                        style: const TextStyle(
-                                            color: AppColors.appColor),
-
-                                    ),
-                                  ):GestureDetector(
-
-                                    onTap:(){
-                                      // _controller.nextPage(
-                                      //     duration: const Duration(milliseconds: 500),
-                                      //     curve: Curves.easeIn);
-                                    },
-                                    child: Text('Next',
-                                      style: const TextStyle(
-                                          color: AppColors.appColor),
-                                    ),
-                                ),
+                        onTap: () {
+                          next();
+                          print("currentStep_: $currentStep");
+                          if (currentStep == 1) {
+                            _controller.jumpToPage(0);
+                          } else if (currentStep == 2) {
+                            _controller.jumpToPage(1);
+                          } else if (currentStep == 3) {
+                            _controller.jumpToPage(2);
+                          }
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: AppColors.appColor,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          height: 40,
+                          width: 80,
+                          child: Padding(
+                            padding: const EdgeInsets.all(1.5),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.colorWhite,
+                                borderRadius: BorderRadius.circular(35),
+                              ),
+                              child: Center(
+                                child: onLastPage
+                                    ? GestureDetector(
+                                        onTap: () {
+                                          // Navigator.push(context,
+                                          //     MaterialPageRoute(
+                                          //         builder :(context){
+                                          //           return LoginScreen();
+                                          //         }));
+                                        },
+                                        child: Text(
+                                          'Finish',
+                                          style: const TextStyle(
+                                              color: AppColors.appColor),
+                                        ),
+                                      )
+                                    : GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HomeScreen(),
+                                            ),
+                                          );
+                                        },
+                                        child: Text(
+                                          'Next',
+                                          style: const TextStyle(
+                                              color: AppColors.appColor),
+                                        ),
+                                      ),
                               ),
                             ),
-                            ),
                           ),
+                        ),
 
                         // child: Text(
                         //   currentStep == stepLength ? 'Finish' : 'Next',
                         //   style: const TextStyle(color: Colors.white),
                         // ),
-
                       ),
                     )
                   ],
@@ -239,23 +236,20 @@ class _OnBoardingScreenState extends State<SetUpMain>{
               ),
             ),
           ),
-
         ],
-
       ),
     );
   }
-  void showWidget(){
+
+  void showWidget() {
     setState(() {
-      widgetVisible = true ;
+      widgetVisible = true;
     });
   }
 
-  void hideWidget(){
+  void hideWidget() {
     setState(() {
-      widgetVisible = false ;
+      widgetVisible = false;
     });
   }
-
-
 }

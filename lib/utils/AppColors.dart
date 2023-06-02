@@ -8,11 +8,15 @@ class AppColors{
   static const Color colorBlack = Color(0xFF000000);
   static const Color colorGray = Color(0xFF6B6B6B);
   static const Color btnColor = Color(0xFF3A3A3A);
+  static const Color colorRed = Color(0xFFF64618);
+  static const Color colorLightRed = Color(0xFFE90C69);
+  static const Color colorBlue = Color(0xFF1691D5);
   static const Color borderColor = Color(0xFFEEEEEE);
   static const Color textHintColors = Color(0xFFBDBDBD);
   static const startColor = Color(0xff719633); // Second `const` is optional in assignments.
   static const endColor = Color(0xff00923A); // Second `const` is optional in assignments.
   static const colorYellow = Color(0xffFFC531); // Second `const` is optional in assignments.
+  static const colorLightYellow = Color(0xffF8A817); // Second `const` is optional in assignments.
   static const colorLightGray = Color(0xffEEEEEE80); // Second `const` is optional in assignments.
 
   static const kAnimationDuration = Duration(milliseconds: 200);

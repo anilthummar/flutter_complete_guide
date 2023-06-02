@@ -115,7 +115,7 @@ class LoginScreen extends StatelessWidget{
                                         content: Text("Pleas enter valid mobile number"),
                                       ));
                                     }else{
-                                      _navigateToHomeScreen(context,const HomeScreen());
+                                      _navigateToHomeScreen(context, HomeScreen());
                                     }
                                   },
                                 ),
