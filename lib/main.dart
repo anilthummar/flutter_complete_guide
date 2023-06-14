@@ -2,12 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_complete_guide/HomeScreen.dart';
+import 'package:flutter_complete_guide/bottompages/matches.dart';
 import 'package:flutter_complete_guide/intro_Screen/Intro_One.dart';
-import 'package:flutter_complete_guide/setupprofile/SearchHomeClub.dart';
-import 'package:flutter_complete_guide/setupprofile/SetUpProfileThree.dart';
-import 'package:flutter_complete_guide/setupprofile/SetUpProfileTwo.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
-import 'package:flutter_complete_guide/utils/Header.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'SplashScreen1.dart';
@@ -54,7 +51,8 @@ class _MyHomePageState extends State<MyHomePage>{
     super.initState();
     Timer(
         const Duration(seconds:3 ),
-        ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  HomeScreen())));
+        ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  Matches())));
+        // ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  IntroScreen())));
   }
 
 

@@ -17,15 +17,21 @@ class IntroOne extends StatelessWidget{
         child: Stack(
 
           children: [
-            Column(children: const [
-              Expanded(flex:5,child: Introone()),
+            Column(children:  [
+              Expanded(flex:8,
+                  child: Image.asset('assets/images/ic_intro_one.png',
+                     height:(MediaQuery.of(context).size.height)/2,
+                      width: double.infinity,
+                      fit: BoxFit.fitHeight,
+                  ),
+              ),
+                  //child: Introone()),
               Expanded(flex:5,child: SizedBox())
             ],),
             Column(
               children: <Widget>[
-                const Expanded(flex: 4, child: SizedBox()),
-                Expanded(
-                  flex: 6,
+                const Expanded(flex: 8, child: SizedBox()),
+                Expanded(flex: 6,
                   child: Container(
                     width: double.maxFinite,
                     decoration: const BoxDecoration(

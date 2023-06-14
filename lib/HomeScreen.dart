@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'bottompages/events.dart';
+import 'bottompages/explore.dart';
+import 'bottompages/letsdink.dart';
+import 'bottompages/matches.dart';
 import 'bottompages/homepage.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,23 +20,12 @@ class Home_Screen extends State<HomeScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
     List<Widget> _widgetOptions = <Widget>[
 
-    HomePages(),
-    Text(
-      'Calender',
-      style: optionStyle,
-    ),
-    Text(
-      'Let’s Dink!',
-      style: optionStyle,
-    ),
-    Text(
-      'Explore',
-      style: optionStyle,
-    ),
-    Text(
-      'Events',
-      style: optionStyle,
-    )
+      HomePages(),
+      Matches(),
+      LetsDink(),
+      Explore(),
+      Events()
+
   ];
 
   @override

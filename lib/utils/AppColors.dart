@@ -15,9 +15,13 @@ class AppColors{
   static const Color textHintColors = Color(0xFFBDBDBD);
   static const startColor = Color(0xff719633); // Second `const` is optional in assignments.
   static const endColor = Color(0xff00923A); // Second `const` is optional in assignments.
+  static const lightgreenbg = Color(0xff108406); // Second `const` is optional in assignments.
   static const colorYellow = Color(0xffFFC531); // Second `const` is optional in assignments.
   static const colorLightYellow = Color(0xffF8A817); // Second `const` is optional in assignments.
+  static const colorFullYellow = Color(0xffFFFF00); // Second `const` is optional in assignments.
   static const colorLightGray = Color(0xffEEEEEE80); // Second `const` is optional in assignments.
+  static const purewhite = Color(0xffFFFFFF); // Second `const` is optional in assignments.
+  static const lightwhite = Color(0xff00000029); // Second `const` is optional in assignments.
 
   static const kAnimationDuration = Duration(milliseconds: 200);
 

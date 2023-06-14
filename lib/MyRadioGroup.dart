@@ -15,7 +15,7 @@ class RadioGroupWidget extends State<MyRadioGroup> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
