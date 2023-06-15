@@ -15,14 +15,3 @@ class _Explore extends State<Explore> {
   }
 
 }
-// Card(
-// elevation: 5,
-// shape: RoundedRectangleBorder(
-// borderRadius: BorderRadius.all( Radius.circular(10),),
-// side: BorderSide(width: 2, color: AppColors.appColor)),
-// child: ListTile(
-//
-// title: Text("Explore $index"),
-// ),
-//
-// );

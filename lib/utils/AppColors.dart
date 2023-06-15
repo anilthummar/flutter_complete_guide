@@ -22,6 +22,8 @@ class AppColors{
   static const colorLightGray = Color(0xffEEEEEE80); // Second `const` is optional in assignments.
   static const purewhite = Color(0xffFFFFFF); // Second `const` is optional in assignments.
   static const lightwhite = Color(0xff00000029); // Second `const` is optional in assignments.
+  static const whiteheader = Color(0xff0000000D); // Second `const` is optional in assignments.
+  static const cardbgcolor = Color(0xFFA3D2AA26); // Second `const` is optional in assignments.
 
   static const kAnimationDuration = Duration(milliseconds: 200);
 
