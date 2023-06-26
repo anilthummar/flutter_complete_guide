@@ -6,8 +6,12 @@ import 'package:flutter_complete_guide/HomeScreen.dart';
 import 'package:flutter_complete_guide/intro_Screen/Intro_One.dart';
 import 'package:flutter_complete_guide/utils/AppColors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
+import 'bottompages/events.dart';
 import 'bottompages/matches.dart';
+import 'getxeample/getxbasicexample.dart';
+import 'getxeample/view/listingscreengetx.dart';
 import 'intro_Screen/IntroSCreen.dart';
 
 
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     String strTitle="Splash Screen";
 
-    return MaterialApp(
+    return GetMaterialApp(
       title:strTitle,
       theme: ThemeData(
         primaryColor: Colors.green,
@@ -51,8 +55,9 @@ class _MyHomePageState extends State<MyHomePage>{
     super.initState();
     Timer(
         const Duration(seconds:3 ),
-        // ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Matches())));
-        ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  IntroScreen())));
+        // ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeScreen())));
+        // ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  GetXBasicExample())));
+        ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  ListingScreen())));
   }
 
 

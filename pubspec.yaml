@@ -41,6 +41,9 @@ dependencies:
   pager: ^0.0.4
   google_maps_flutter: ^2.0.1
   carousel_slider: ^4.0.0
+  get: ^4.6.5
+  http: ^0.13.4
+  dio: ^5.2.1+1
 
 dev_dependencies:
   flutter_test:

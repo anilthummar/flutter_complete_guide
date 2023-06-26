@@ -24,7 +24,7 @@ class Home_Screen extends State<HomeScreen> {
       Matches(),
       LetsDink(),
       Explore(),
-      Events()
+      MyEvents()
 
   ];
 
